@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+#D0E8F2
+#CAEBEC
+#E3F2F8
+#DDF6F6
+*/
+
+@media (max-width: 450px) {
+  .header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DDF6F6;
+    width: 100%;
+    height: 50px;
+  }
+
+  .language {
+    margin-left: 15px;
+  }
+
+  .logo {
+
+  }
+
+  .hamburger-menu {
+    display: flex;
+    position: relative;
+    background-color: #DDF6F6;
+    border: none;
+    margin-right: 15px;
+  }
+
+  .hamburger-menu-img {
+    display: flex;
+    width: 40px;
+  }
+}
