@@ -43,12 +43,12 @@ function GetStarted() {
               </select>
               <label for="sound" className='sound'>Sound:</label>
               <select id="sound" name="sound">
-                <option value="camino">Camino</option>
-                <option value="canto">Canto degli uccelli</option>
-                <option value="pioggia">Pioggia battente</option>
-                <option value="vento">Vento tra gli alberi</option>
+                <option value="fire">Fire</option>
+                <option value="birds">Birds</option>
+                <option value="rain">Rain</option>
+                <option value="wind">Wind</option>
               </select>
-              <input type="submit" className='submit' onClick={handleStartMeditate}></input>
+              <input type="submit" value='Start' className='submit' onClick={handleStartMeditate}></input>
             </form>
           </div>
         </div>
