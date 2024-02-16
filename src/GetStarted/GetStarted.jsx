@@ -3,11 +3,16 @@ import './GetStarted.css'
 import meditateLogo from '../../public/meditate-logo.svg'
 import MainContent from '../MainContent/MainContent'
 import MeditationSession from '../MeditationSession/MeditationSession'
+import Fire from '../assets/fire.mp3'
+import Birds from '../assets/birds.mp3'
+import Rain from '../assets/rain.mp3'
+import Wind from '../assets/wind.mp3'
 
 function GetStarted() {
   const [closeGetStarted, setCloseGetStarted] = useState(false);
   const [startMeditate, setStartMeditate] = useState(false);
   const [selectedTime, setSelectedTime] = useState(1);
+  const [selectedSound, setSelectedSound] = useState('Fire');
 
   const handleButtonClick = () => {
     setCloseGetStarted(true);
@@ -21,13 +26,17 @@ function GetStarted() {
     setSelectedTime(parseInt(event.target.value));
   };
 
+  const handleSoundChange = (event) => {
+    setSelectedSound(event.target.value);
+  };
+
   if (closeGetStarted) {
     return <MainContent />;
   } 
   
     else if (startMeditate){
 
-      return <MeditationSession time={selectedTime} />
+      return <MeditationSession time={selectedTime} sound={selectedSound}/>
   }
 
       return(
@@ -46,12 +55,12 @@ function GetStarted() {
                 <option value="20">20 min</option>
                 <option value="30">30 min</option>
               </select>
-              <label htmlFor="sound" className='sound'>Sound:</label>
+              <label htmlFor="sound" className='sound' onChange={handleSoundChange}>Sound:</label>
               <select id="sound" name="sound">
-                <option value="fire">Fire</option>
-                <option value="birds">Birds</option>
-                <option value="rain">Rain</option>
-                <option value="wind">Wind</option>
+                <option value={Fire}>Fire</option>
+                <option value={Birds}>Birds</option>
+                <option value={Rain}>Rain</option>
+                <option value={Wind}>Wind</option>
               </select>
               <input type="submit" value='Start' className='submit' onClick={handleStartMeditate}></input>
             </form>

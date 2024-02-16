@@ -3,7 +3,7 @@ import './MeditationSession.css';
 import meditateLogo from '../../public/meditate-logo.svg';
 import GetStarted from '../GetStarted/GetStarted';
 
-function MeditationSession( {time} ) {
+function MeditationSession( {time, sound} ) {
   const [stopMeditate, setStopMeditate] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -55,6 +55,7 @@ function MeditationSession( {time} ) {
           {Math.floor((remainingTime % 60000) / 1000).toLocaleString('en-US', { minimumIntegerDigits: 2 })}
         </div>
         <progress value={progress} max="100" className="progress-bar" />
+        <audio src={sound} autoPlay loop />
         <div className="session-actions">
           <button className="play" onClick={handlePlay}>play</button>
           <button className="pause" onClick={handlePause}>pause</button>
