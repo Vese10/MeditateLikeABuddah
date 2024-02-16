@@ -15,6 +15,9 @@
 
   .session {
     margin-top: 200px;
+  }
 
+  .progress-bar {
+    font-size: 30px;
   }
 }
