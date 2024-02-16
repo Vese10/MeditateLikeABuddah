@@ -1,7 +1,19 @@
+import { useState } from 'react'
 import meditateLogo from '../../public/meditate-logo.svg'
 import './MainContent.css'
+import GetStarted from '../GetStarted/GetStarted'
 
 function MainContent(){
+  const [showGetStarted, setShowGetStarted] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowGetStarted(true);
+  }
+
+  if (showGetStarted) {
+    return <GetStarted />;
+  }
+
   return(
     <div className="main-content">
       <h1 className="title">Welcome to Meditate Like A Buddah</h1>
@@ -18,7 +30,7 @@ function MainContent(){
           <li>Close with kindness</li>
         </ol>
       </div>
-      <button className="get-started">Get Started</button>
+      <button className="get-started" onClick={handleButtonClick}>Get Started</button>
     </div>
   )
 }
