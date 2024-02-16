@@ -2,6 +2,8 @@ import './App.css'
 import Header from './Header/Header'
 import MainContent from './MainContent/MainContent'
 import Footer from './Footer/Footer'
+import About from './About/About'
+import Contact from './Contact/Contact'
 
 function App() {
 
@@ -9,6 +11,8 @@ function App() {
     <>
       <Header></Header>
       <MainContent></MainContent>
+      <About></About>
+      <Contact></Contact>
       <Footer></Footer>
     </>
   )
