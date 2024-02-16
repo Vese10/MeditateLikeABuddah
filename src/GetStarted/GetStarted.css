@@ -26,6 +26,31 @@
     margin-bottom: 20px;
   }
 
+  .form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .time {
+
+  }
+
+  .sound {
+    margin-top: 20px;
+  }
+
+  .submit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: auto;
+    height: auto;
+    background-color: #DDF6F6;
+  }
+
   .begin {
     margin-top: 20px;
     padding: 10px 20px;
