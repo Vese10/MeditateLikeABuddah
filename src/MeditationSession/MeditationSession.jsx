@@ -1,3 +1,4 @@
+import ReactPlayer from 'react-player'
 import { useState, useEffect } from 'react';
 import './MeditationSession.css';
 import meditateLogo from '../../public/meditate-logo.svg';
@@ -9,6 +10,7 @@ function MeditationSession( {time, sound} ) {
   const [progress, setProgress] = useState(0);
   const sessionDuration = time * 60000;
   const [remainingTime, setRemainingTime] = useState(sessionDuration);
+  const [soundPlaying, setSoundPlaying] = useState(true);
 
   useEffect(() => {
     let interval;
@@ -28,6 +30,14 @@ function MeditationSession( {time, sound} ) {
     }
 
     return () => clearInterval(interval);
+  }, [isPaused]);
+
+  useEffect(() => {
+    if (isPaused) {
+      setSoundPlaying(false);
+    } else {
+      setSoundPlaying(true);
+    }
   }, [isPaused]);
 
   const handleStopMeditate = () => {
@@ -55,7 +65,7 @@ function MeditationSession( {time, sound} ) {
           {Math.floor((remainingTime % 60000) / 1000).toLocaleString('en-US', { minimumIntegerDigits: 2 })}
         </div>
         <progress value={progress} max="100" className="progress-bar" />
-        <audio src={sound} autoPlay loop />
+        <ReactPlayer className="react-player" url={sound} playing={soundPlaying} loop />
         <div className="session-actions">
           <button className="play" onClick={handlePlay}>play</button>
           <button className="pause" onClick={handlePause}>pause</button>
