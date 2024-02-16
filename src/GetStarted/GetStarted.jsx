@@ -12,7 +12,7 @@ function GetStarted() {
   const [closeGetStarted, setCloseGetStarted] = useState(false);
   const [startMeditate, setStartMeditate] = useState(false);
   const [selectedTime, setSelectedTime] = useState(1);
-  const [selectedSound, setSelectedSound] = useState('Fire');
+  const [selectedSound, setSelectedSound] = useState(Fire);
 
   const handleButtonClick = () => {
     setCloseGetStarted(true);
@@ -55,8 +55,8 @@ function GetStarted() {
                 <option value="20">20 min</option>
                 <option value="30">30 min</option>
               </select>
-              <label htmlFor="sound" className='sound' onChange={handleSoundChange}>Sound:</label>
-              <select id="sound" name="sound">
+              <label htmlFor="sound" className='sound'>Sound:</label>
+              <select id="sound" name="sound"  onChange={handleSoundChange}>
                 <option value={Fire}>Fire</option>
                 <option value={Birds}>Birds</option>
                 <option value={Rain}>Rain</option>
