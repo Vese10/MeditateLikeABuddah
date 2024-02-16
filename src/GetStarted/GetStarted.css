@@ -35,11 +35,20 @@
   }
 
   .time {
-
+    font-size: 30px;
   }
 
   .sound {
     margin-top: 20px;
+    font-size: 30px;
+  }
+
+  select {
+    font-size: 20px;
+  }
+
+  option {
+    font-size: 20px;
   }
 
   .submit {
@@ -49,14 +58,6 @@
     width: auto;
     height: auto;
     background-color: #DDF6F6;
-  }
-
-  .begin {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    width: auto;
-    height: auto;
-    background-color: #DDF6F6;
+    font-size: 20px;
   }
 }
