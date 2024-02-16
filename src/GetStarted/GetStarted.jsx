@@ -31,7 +31,7 @@ function GetStarted() {
           <div className="options">
             <h2 className='personal-settings'>Customize your session:</h2>
             <form className='form' action="/action_page.php">
-              <label for="time" className='time'>Time:</label>
+              <label htmlFor="time" className='time'>Time:</label>
               <select id="time" name="time">
                 <option value="1">1 min</option>
                 <option value="2">2 min</option>
@@ -41,7 +41,7 @@ function GetStarted() {
                 <option value="20">20 min</option>
                 <option value="30">30 min</option>
               </select>
-              <label for="sound" className='sound'>Sound:</label>
+              <label htmlFor="sound" className='sound'>Sound:</label>
               <select id="sound" name="sound">
                 <option value="fire">Fire</option>
                 <option value="birds">Birds</option>
