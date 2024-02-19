@@ -1,11 +1,7 @@
-import Footer from '../Footer/Footer'
-import Header from '../Header/Header'
 import './About.css'
 
 function About(){
   return(
-    <div>
-      <Header />
       <div className='about'>
         <div className='quote-one'>
           <h1>Gianluca Gotto</h1>
@@ -20,8 +16,6 @@ function About(){
           <p>"Ciao"</p>
         </div>
       </div>
-      <Footer />
-    </div>
   )
 }
 
