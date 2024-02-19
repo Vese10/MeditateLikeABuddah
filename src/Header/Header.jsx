@@ -2,10 +2,12 @@ import { useState,useEffect, useRef } from 'react'
 import hamburgerMenu from '../assets/hamburger-menu.png'
 import meditateLogo from '../../public/meditate-logo.svg'
 import './Header.css'
+import About from '../About/About'
 
 function Header(){
   const [openMenu, setOpenMenu] = useState(false);
   const menuRef = useRef(null);
+  const [openAbout, setOpenAbout] = useState(false);
 
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
@@ -24,6 +26,14 @@ function Header(){
     };
   }, []);
 
+  const handleOpenAbout = () => {
+    setOpenAbout(true);
+  }
+
+  if (openAbout) {
+    return <About />;
+  }
+
   return(
     <header ref={menuRef}>
       <nav className="header">
@@ -40,7 +50,7 @@ function Header(){
         </button>
         <ul className={`${openMenu ? "hamburger-menu-open" : "hamburger-menu"}`}>
           <li>Home</li>
-          <li>About</li>
+          <li onClick={handleOpenAbout}>About</li>
           <li>Contact</li>
         </ul>
       </nav>
