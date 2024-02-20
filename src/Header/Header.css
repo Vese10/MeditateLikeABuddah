@@ -11,7 +11,7 @@
 #DDF6F6
 */
 
-@media (max-width: 450px) {
+@media (min-width: 460px) {
   .header {
     position: fixed;
     display: flex;
@@ -22,11 +22,92 @@
     width: 100%;
     height: 100px;
     z-index: 2;
+    padding: 0 20px;
   }
 
-  .language {
-    margin-left: 15px;
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
+
+  .meditate-logo {
+    display: flex;
+    width: 60px;
+  }
+
+  .logo-text {
+    font-size: 50px;
+  }
+
+  .menu-btn {
+    display: flex;
+    position: relative;
+    background-color: #DDF6F6;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .hamburger-menu-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background-color: #DDF6F6;
+    right: 0%;
+    left: 0%;
+    top: 100px;
+    padding-bottom: 20px;
+    z-index: 3;
+  }
+
+  .hamburger-menu-open > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    font-size: 45px;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hamburger-menu-open > li:hover {
+    background-color: #D0E8F2;
+  }
+
+  .hamburger-menu-open > li:active {
+    background-color: #DDF6F6;
+  }
+
+  .hamburger-menu-img {
+    display: flex;
+    width: 40px;
+  }
+}
+
+@media (max-width: 460px) {
+  .header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DDF6F6;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+    padding: 0 10px;
+  }
+
+  
 
   .logo {
     display: flex;
@@ -45,7 +126,6 @@
     position: relative;
     background-color: #DDF6F6;
     border: none;
-    margin-right: 15px;
     cursor: pointer;
   }
 

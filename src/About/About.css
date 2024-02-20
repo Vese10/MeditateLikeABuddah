@@ -4,14 +4,43 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 450px) {
+@media (min-width: 460px) {
   .about {
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    padding: 20px;
+    background-color: #D0E8F2;
+    text-align: center;
+    top: 100px;
+    z-index: 1;
+  }
+
+  .intro {
+    font-size: 25px;
+    padding-bottom: 50px;
+  }
+
+  .quote-one,
+  .quote-two,
+  .quote-three,
+  .quote-four {
+    font-size: 22px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  .about {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     padding: 20px;
     background-color: #D0E8F2;
     text-align: center;
