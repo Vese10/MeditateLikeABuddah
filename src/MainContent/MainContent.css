@@ -13,8 +13,8 @@
     width: 100%;
     height: 100%;
     padding: 110px 60px;
-    background-color: #D0E8F2;
     text-align: center;
+    background-color: #EDFFFA;
   }
 
   .title {
@@ -42,17 +42,17 @@
     border-radius: 50px;
     width: auto;
     height: auto;
-    background-color: #DDF6F6;
     cursor: pointer;
     font-size: 25px;
+    background-color: #9BEFD7;
   }
 
   .get-started:hover {
-    background-color: #CAEBEC;
+    background-color: #EDFFFA;
   }
 
   .get-started:active {
-    background-color: #D0E8F2;
+    background-color: #9BEFD7;
   }
 }
 
@@ -65,7 +65,7 @@
     width: 100%;
     height: 100vh;
     padding: 120px 60px;
-    background-color: #D0E8F2;
+    background-color: #EDFFFA;
     text-align: center;
   }
 
