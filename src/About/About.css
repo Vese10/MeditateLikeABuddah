@@ -4,6 +4,42 @@
   box-sizing: border-box;
 }
 
+.about {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro {
+  animation-delay: 1s;
+}
+
+.quote-one {
+  animation-delay: 1.5s;
+}
+
+.quote-two {
+  animation-delay: 2s;
+}
+
+.quote-three {
+  animation-delay: 2.5s;
+}
+
+.quote-four {
+  animation-delay: 3s;
+}
+
 @media (min-width: 460px) {
   .about {
     position: fixed;
