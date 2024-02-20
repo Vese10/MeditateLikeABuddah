@@ -67,9 +67,9 @@ function MeditationSession( {time, sound} ) {
         <progress value={progress} max="100" className="progress-bar" />
         <ReactPlayer className="react-player" url={sound} playing={soundPlaying} loop />
         <div className="session-actions">
-          <button className="play" onClick={handlePlay}>play</button>
-          <button className="pause" onClick={handlePause}>pause</button>
-          <button className="close" onClick={handleStopMeditate}>X</button>
+          <button className="play" onClick={handlePlay}>▶️</button>
+          <button className="pause" onClick={handlePause}>⏸</button>
+          <button className="close" onClick={handleStopMeditate}>⏹</button>
         </div>
       </div>
     </div>

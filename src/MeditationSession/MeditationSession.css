@@ -18,11 +18,30 @@
   }
 
   .session {
-    margin-top: 200px;
+    margin-top: 120px;
+  }
+
+  .countdown {
+    font-size: 20px;
   }
 
   .progress-bar {
     font-size: 30px;
+  }
+
+  .session-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+  }
+
+  .play,
+  .pause,
+  .close {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #1a9af5;
   }
 
 }
