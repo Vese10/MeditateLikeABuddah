@@ -20,7 +20,8 @@ function Header({toggleAbout, toggleContact, toggleMainContent}){
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setOpenMenu(false);
+        setOpenMenu(false); 
+        setOpenHamburgerMenu(false);
       }
     };
 
@@ -37,7 +38,7 @@ function Header({toggleAbout, toggleContact, toggleMainContent}){
           <button className="ita">IT</button>
           <button className="eng">EN</button>
         </div>
-        <div className="logo" onClick={() => {toggleMainContent(); setOpenMenu(false);}}>
+        <div className="logo" onClick={() => {toggleMainContent(); setOpenMenu(false); setOpenHamburgerMenu(false);}}>
           <img src={meditateLogo} className='meditate-logo'></img>
           <p className="logo-text">Meditate Like A Buddah!</p>
         </div>
@@ -45,9 +46,9 @@ function Header({toggleAbout, toggleContact, toggleMainContent}){
           <img src={`${openHamburgerMenu ? hamburgerMenuClose : hamburgerMenu}`} className="hamburger-menu-img"></img>
         </button>
         <ul className={`${openMenu ? "hamburger-menu-open" : "hamburger-menu"}`}>
-          <li onClick={() => {toggleMainContent(); setOpenMenu(false);}}>Home</li>
-          <li onClick={() => {toggleAbout(); setOpenMenu(false);}}>About</li>
-          <li onClick={() => {toggleContact(); setOpenMenu(false);}}>Contact</li>
+          <li onClick={() => {toggleMainContent(); setOpenMenu(false); setOpenHamburgerMenu(false);}}>Home</li>
+          <li onClick={() => {toggleAbout(); setOpenMenu(false); setOpenHamburgerMenu(false);}}>About</li>
+          <li onClick={() => {toggleContact(); setOpenMenu(false); setOpenHamburgerMenu(false);}}>Contact</li>
         </ul>
       </nav>
     </header>
