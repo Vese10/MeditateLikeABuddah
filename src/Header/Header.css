@@ -48,6 +48,17 @@
     margin: 0 5px;
     padding: 8px;
     min-width: 20px;
+    border: 1px solid #000000;
+  }
+
+  .ita:hover,
+  .eng:hover {
+    background-color: #D3D9CE;
+  }
+
+  .ita:active,
+  .eng:active {
+    background-color: #B6C1AD;
   }
 
   .menu-btn {
