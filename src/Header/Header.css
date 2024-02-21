@@ -11,7 +11,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #9BEFD7;
+    background-color: #B6C1AD;
     width: 100%;
     height: 100px;
     z-index: 2;
@@ -42,7 +42,7 @@
   .eng {
     display: flex;
     position: relative;
-    background-color: #EFFFF1;
+    background-color: #DFE4DC;
     border: none;
     cursor: pointer;
     margin: 0 5px;
@@ -53,7 +53,7 @@
   .menu-btn {
     display: flex;
     position: relative;
-    background-color: #9BEFD7;
+    background-color: #B6C1AD;
     border: none;
     cursor: pointer;
   }
@@ -67,8 +67,8 @@
     top: 100px;
     right: 0;
     left: 0;
-    background-color: #9BEFD7;
-    border-top: 2px solid #EFFFF1;
+    background-color: #B6C1AD;
+    border-top: 2px solid #DFE4DC;
     border-radius: 4px;
     padding: 10px;
     animation: mymove 1s;
@@ -88,11 +88,11 @@
   }
 
   .hamburger-menu-open > li:hover {
-    background-color: #EFFFF1;
+    background-color: #DFE4DC;
   }
 
   .hamburger-menu-open > li:active {
-    background-color: #9BEFD7;
+    background-color: #B6C1AD;
   }
 
   .hamburger-menu-img {
@@ -108,7 +108,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #9BEFD7;
+    background-color: #B6C1AD;
     width: 100%;
     height: 100px;
     z-index: 2;
@@ -138,7 +138,7 @@
   .eng {
     display: flex;
     position: relative;
-    background-color: #EFFFF1;
+    background-color: #DFE4DC;
     border: none;
     cursor: pointer;
     margin: 0 5px;
@@ -149,7 +149,7 @@
   .menu-btn {
     display: flex;
     position: relative;
-    background-color: #9BEFD7;
+    background-color: #B6C1AD;
     border: none;
     cursor: pointer;
   }
@@ -163,8 +163,8 @@
     top: 100px;
     right: 0;
     left: 0;
-    background-color: #9BEFD7;
-    border-top: 2px solid #EFFFF1;
+    background-color: #B6C1AD;
+    border-top: 2px solid #DFE4DC;
     border-radius: 4px;
     padding: 10px;
     animation: mymove 1s;
@@ -184,7 +184,7 @@
   }
 
   .hamburger-menu-open > li:active {
-    background-color: #EFFFF1;
+    background-color: #DFE4DC;
   }
 
   .hamburger-menu-img {
