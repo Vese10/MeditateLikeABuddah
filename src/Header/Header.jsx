@@ -1,14 +1,20 @@
 import { useState,useEffect, useRef } from 'react'
-import hamburgerMenu from '../assets/hamburger-menu.png'
 import meditateLogo from '../../public/meditate-logo.svg'
 import './Header.css'
+import hamburgerMenu from '../assets/hamburger-menu.png'
+import hamburgerMenuClose from '../assets/hamburger-menu-closed.svg'
 
 function Header({toggleAbout, toggleContact, toggleMainContent}){
   const [openMenu, setOpenMenu] = useState(false);
+  const [openHamburgerMenu, setOpenHamburgerMenu] = useState(false);
   const menuRef = useRef(null);
 
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
+  }
+
+  const handleOpenHamburgerMenu = () => {
+    setOpenHamburgerMenu(!openHamburgerMenu);
   }
 
   useEffect(() => {
@@ -35,8 +41,8 @@ function Header({toggleAbout, toggleContact, toggleMainContent}){
           <img src={meditateLogo} className='meditate-logo'></img>
           <p className="logo-text">Meditate Like A Buddah!</p>
         </div>
-        <button className='menu-btn' onClick={handleOpenMenu}>
-          <img src={hamburgerMenu} className="hamburger-menu-img"></img>
+        <button className='menu-btn' onClick={() => {handleOpenMenu(); handleOpenHamburgerMenu();}}>
+          <img src={`${openHamburgerMenu ? hamburgerMenuClose : hamburgerMenu}`} className="hamburger-menu-img"></img>
         </button>
         <ul className={`${openMenu ? "hamburger-menu-open" : "hamburger-menu"}`}>
           <li onClick={() => {toggleMainContent(); setOpenMenu(false);}}>Home</li>
