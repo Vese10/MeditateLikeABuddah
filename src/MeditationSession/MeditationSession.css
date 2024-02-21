@@ -92,13 +92,33 @@
     padding: 30px;
   }
 
+  .pause {
+    font-size: 15px;
+    padding: 10px 15px 10px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #9BEFD7;
+  }
+
   .play,
-  .pause,
   .close {
     font-size: 20px;
     padding: 10px;
     border-radius: 15px;
-    border: 2px solid #1a9af5;
+    cursor: pointer;
+    background-color: #9BEFD7;
+  }
+
+  .play:hover,
+  .pause:hover,
+  .close:hover {
+    background-color: #EDFFFA;
+  }
+
+  .play:active,
+  .pause:active,
+  .close:active {
+    background-color: #9BEFD7;
   }
 
 }

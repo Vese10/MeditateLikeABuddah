@@ -124,8 +124,15 @@
     padding: 10px;
     border-radius: 15px;
     font-size: 20px;
-    border: 2px solid #1a9af5;
-    color: #1a9af5;
-    font-weight: bold;
+    background-color: #9BEFD7;
+    cursor: pointer;
+  }
+
+  .submit:hover {
+    background-color: #EDFFFA;
+  }
+
+  .submit:active {
+    background-color: #9BEFD7;
   }
 }

@@ -17,7 +17,7 @@ function MainContent(){
   return(
     <div className="main-content">
       <h1 className="title">Welcome to Meditate Like A Buddah</h1>
-      <img src={meditateLogo} className='meditate-logo-main'></img>
+      <img src={meditateLogo} className='meditate-logo-main' alt='Buddah logo'></img>
       <div className="how-to-meditate">
         <h2 className='are-you-ready'>Are you ready to meditate?</h2>
         <ol className="list">

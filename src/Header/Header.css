@@ -30,7 +30,7 @@
   }
 
   .logo-text {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .language {
@@ -61,7 +61,7 @@
   .hamburger-menu,
   .hamburger-menu-open {
     position: absolute;
-    top: 100px;
+    top: -250%;
     right: 0;
     left: 0;
     background-color: #9BEFD7;
@@ -73,6 +73,7 @@
   }
 
   .hamburger-menu-open {
+    top: 100px;
     opacity: 1;
   }
 

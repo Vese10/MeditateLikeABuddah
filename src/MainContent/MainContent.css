@@ -94,6 +94,15 @@
     border-radius: 50px;
     width: auto;
     height: auto;
-    background-color: #DDF6F6;
+    background-color: #9BEFD7;
+    cursor: pointer;
+  }
+
+  .get-started:hover {
+    background-color: #EDFFFA;
+  }
+
+  .get-started:active {
+    background-color: #9BEFD7;
   }
 }
