@@ -57,7 +57,7 @@ function MeditationSession( {time, sound} ) {
   }
 
   return (
-    <div className="settings">
+    <div className="meditate-set">
       <img src={meditateLogo} className="meditate-logo-set" />
       <div className="session">
         <div className="countdown">

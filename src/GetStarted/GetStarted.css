@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+.settings {
+  animation: mymove 2s;
+}
+
+@keyframes mymove {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 @media (min-width: 460px) {
   .settings {
     position: relative;
@@ -88,6 +97,7 @@
   .meditate-logo-set {
     display: flex;
     width: 300px;
+    cursor: pointer;
   }
 
   .personal-settings {

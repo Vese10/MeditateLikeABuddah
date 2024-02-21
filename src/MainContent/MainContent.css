@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+.main-content {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (min-width: 460px) {
   .main-content {
     position: relative;
