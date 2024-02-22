@@ -1,22 +1,12 @@
 import { useState } from 'react'
 import meditateLogo from '../../public/meditate-logo.svg'
 import './MainContent.css'
-import GetStarted from '../GetStarted/GetStarted'
 import enTranslations from '../Language/en.json'
 import itTranslations from '../Language/it.json'
 
-function MainContent({language}){
-  const [showGetStarted, setShowGetStarted] = useState(false);
+function MainContent({toggleGetStarted, language}){
 
   const translations = language === 'en' ? enTranslations : itTranslations;
-
-  const handleButtonClick = () => {
-    setShowGetStarted(true);
-  }
-
-  if (showGetStarted) {
-    return <GetStarted />;
-  }
 
   return(
     <div className="main-content">
@@ -30,7 +20,7 @@ function MainContent({language}){
           ))}
         </ol>
       </div>
-      <button className="get-started" onClick={handleButtonClick}>{translations.get_started}</button>
+      <button className="get-started" onClick={toggleGetStarted}>{translations.get_started}</button>
     </div>
   )
 }
