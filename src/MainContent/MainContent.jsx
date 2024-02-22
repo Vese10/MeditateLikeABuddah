@@ -1,12 +1,19 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import meditateLogo from '../../public/meditate-logo.svg'
 import './MainContent.css'
 import enTranslations from '../Language/en.json'
 import itTranslations from '../Language/it.json'
 
 function MainContent({toggleGetStarted, language}){
+  const [translations, setTranslations] = useState({});
 
-  const translations = language === 'en' ? enTranslations : itTranslations;
+  useEffect(() => {
+    if (language === 'en') {
+      setTranslations(enTranslations);
+    } else if (language === 'it') {
+      setTranslations(itTranslations);
+    }
+  }, [language]);
 
   return(
     <div className="main-content">
@@ -15,7 +22,7 @@ function MainContent({toggleGetStarted, language}){
       <div className="how-to-meditate">
         <h2 className='are-you-ready'>{translations.are_you_ready}</h2>
         <ol className="list">
-          {translations.steps.map((step, index) => (
+          {translations.steps && translations.steps.map((step, index) => (
             <li key={index}>{step}</li>
           ))}
         </ol>
