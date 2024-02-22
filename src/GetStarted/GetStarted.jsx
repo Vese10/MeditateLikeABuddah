@@ -45,10 +45,10 @@ function GetStarted({toggleMainContent, toggleMeditationSession, language}) {
               </select>
               <label htmlFor="sound" className='sound'>{translations.sound}</label>
               <select id="sound" name="sound"  onChange={handleSoundChange}>
-                <option value={Fire}>Fire</option>
-                <option value={Birds}>Birds</option>
-                <option value={Rain}>Rain</option>
-                <option value={Wind}>Wind</option>
+                <option value={Fire}>{translations.fire}</option>
+                <option value={Birds}>{translations.birds}</option>
+                <option value={Rain}>{translations.rain}</option>
+                <option value={Wind}>{translations.wind}</option>
               </select>
               <input type="submit" value='Start' className='submit'></input>
             </form>
