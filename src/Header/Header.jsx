@@ -4,7 +4,7 @@ import './Header.css'
 import hamburgerMenu from '../assets/hamburger-menu.png'
 import hamburgerMenuClose from '../assets/hamburger-menu-closed.svg'
 
-function Header({toggleAbout, toggleContact, toggleMainContent}){
+function Header({toggleAbout, toggleContact, toggleMainContent, changeLanguage}){
   const [openMenu, setOpenMenu] = useState(false);
   const [openHamburgerMenu, setOpenHamburgerMenu] = useState(false);
   const menuRef = useRef(null);
@@ -35,8 +35,8 @@ function Header({toggleAbout, toggleContact, toggleMainContent}){
     <header ref={menuRef}>
       <nav className="header">
         <div className="language">
-          <button className="ita">IT</button>
-          <button className="eng">EN</button>
+          <button className="ita" onClick={() => changeLanguage('it')}>IT</button>
+          <button className="eng" onClick={() => changeLanguage('en')}>EN</button>
         </div>
         <div className="logo" onClick={() => {toggleMainContent(); setOpenMenu(false); setOpenHamburgerMenu(false);}}>
           <img src={meditateLogo} className='meditate-logo'></img>

@@ -10,6 +10,7 @@ function App() {
   const [showAbout, setShowAbout] = useState(false);
   const [showContact, setShowContact] = useState(false);
   const [showMainContent, setShowMainContent] = useState(true);
+  const [language, setLanguage] = useState('en')
 
   const toggleAbout = () => {
     setShowAbout(true);
@@ -29,13 +30,17 @@ function App() {
     setShowContact(false);
   }
 
+  const changeLanguage = (selectedLanguage) => {
+    setLanguage(selectedLanguage);
+  }
+
   return (
     <>
-      <Header toggleAbout={toggleAbout} toggleContact={toggleContact} toggleMainContent={toggleMainContent}/>
-      {showAbout ? <About /> : null}
-      {showContact ? <Contact /> : null}
-      {showMainContent ? <MainContent /> : null}
-      <Footer />
+      <Header toggleAbout={toggleAbout} toggleContact={toggleContact} toggleMainContent={toggleMainContent} changeLanguage={changeLanguage}/>
+      {showAbout ? <About language={language}/> : null}
+      {showContact ? <Contact language={language}/> : null}
+      {showMainContent ? <MainContent language={language} /> : null}
+      <Footer language={language}/>
     </>
   )
 }

@@ -1,19 +1,30 @@
 import './Contact.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
+import enTranslations from '../Language/en.json'
+import itTranslations from '../Language/it.json'
 
-function Contact() {
+function Contact({language}) {
   const [submitting, setSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
+  const [translations, setTranslations] = useState({});
+
+  useEffect(() => {
+    if (language === 'en') {
+      setTranslations(enTranslations);
+    } else if (language === 'it') {
+      setTranslations(itTranslations);
+    }
+  }, [language]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    setSubmitMessage('Just a moment...');
+    setSubmitMessage(translations.sending);
 
     try {
       await emailjs.sendForm('service_0e7u904', 'template_ccrdvml', e.target, 'tMJ6iLYRPLiPo_2pi');
-      setSubmitMessage('Message Sent Successfully');
+      setSubmitMessage(translations.message_ok);
       setTimeout(() => {
         setSubmitMessage('');
         e.target.reset();
@@ -21,7 +32,7 @@ function Contact() {
       }, 1000);
     } catch (error) {
       console.error('Error sending message:', error);
-      setSubmitMessage('Something Went Wrong');
+      setSubmitMessage(translations.messege_error);
       setSubmitting(false);
     }
   };
@@ -29,19 +40,19 @@ function Contact() {
   return (
     <div className='contact'>
       <form className='contact-form' onSubmit={handleSubmit}>
-        <h1 className='contact-me'>Contact Me</h1>
-        <p className='feel-free'>Feel free to send me a message about anything you need, from information about my project to collaborations. I would love to hear from you!</p>
-        <label htmlFor='user_name'>Name:</label>
-        <input type='text' id='user_name' name='user_name' placeholder='Your name:' required/>
+        <h1 className='contact-me'>{translations.contact_me}</h1>
+        <p className='feel-free'>{translations.invitation}</p>
+        <label htmlFor='user_name'>{translations.name}</label>
+        <input type='text' id='user_name' name='user_name' placeholder={translations.placeholder_name} required/>
 
         <label htmlFor='user_email'>Email:</label>
         <input type='email' id='user_email' name='user_email' placeholder='example@gmail.com:' required/>
         
-        <label htmlFor='message'>Message:</label>
-        <textarea id='message' name='message' placeholder='Enter your message...' required/>
+        <label htmlFor='message'>{translations.message}</label>
+        <textarea id='message' name='message' placeholder={translations.placeholder_message} required/>
         
         <button type='submit' className='submit-form' disabled={submitting}>
-          {submitting ? submitMessage : 'Submit'}
+          {submitting ? submitMessage : translations.submit}
         </button>
       </form>
     </div>

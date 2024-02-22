@@ -2,8 +2,13 @@ import instagram from '../assets/instagram-logo.svg'
 import github from '../assets/github-logo.png'
 import linkedin from '../assets/linkedin-logo.png'
 import './Footer.css'
+import enTranslations from '../Language/en.json'
+import itTranslations from '../Language/it.json'
 
-function Footer(){
+function Footer({language}){
+
+  const translations = language === 'en' ? enTranslations : itTranslations;
+
   return(
     <div className='footer'>
       <div className='social-logos'>
@@ -17,7 +22,7 @@ function Footer(){
           <img className="linkedin-img" src={linkedin} alt="LinkedIn logo" /> 
         </a>
       </div>
-      <small className='footer-text'>© 2024 Veselin Hristov. All rights reserved.</small>
+      <small className='footer-text'>{translations.rights}</small>
     </div>
   )
 }

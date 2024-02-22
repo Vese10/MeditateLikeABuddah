@@ -7,12 +7,16 @@ import Fire from '../assets/fire.mp3'
 import Birds from '../assets/birds.mp3'
 import Rain from '../assets/rain.mp3'
 import Wind from '../assets/wind.mp3'
+import enTranslations from '../Language/en.json'
+import itTranslations from '../Language/it.json'
 
-function GetStarted() {
+function GetStarted({language}) {
   const [closeGetStarted, setCloseGetStarted] = useState(false);
   const [startMeditate, setStartMeditate] = useState(false);
   const [selectedTime, setSelectedTime] = useState(1);
   const [selectedSound, setSelectedSound] = useState(Fire);
+
+  const translations = language === 'en' ? enTranslations : itTranslations;
 
   const handleButtonClick = () => {
     setCloseGetStarted(true);
@@ -43,9 +47,9 @@ function GetStarted() {
         <div className="settings">
           <img src={meditateLogo} className='meditate-logo-set' onClick={handleButtonClick}></img>
           <div className="options">
-            <h2 className='personal-settings'>Customize your session:</h2>
+            <h2 className='personal-settings'>{translations.personal_settings}</h2>
             <form className='form' action="/action_page.php">
-              <label htmlFor="time" className='time'>Time:</label>
+              <label htmlFor="time" className='time'>{translations.time}</label>
               <select id="time" name="time" onChange={handleTimeChange}>
                 <option value="1">1 min</option>
                 <option value="2">2 min</option>
@@ -55,7 +59,7 @@ function GetStarted() {
                 <option value="20">20 min</option>
                 <option value="30">30 min</option>
               </select>
-              <label htmlFor="sound" className='sound'>Sound:</label>
+              <label htmlFor="sound" className='sound'>{translations.sound}</label>
               <select id="sound" name="sound"  onChange={handleSoundChange}>
                 <option value={Fire}>Fire</option>
                 <option value={Birds}>Birds</option>
