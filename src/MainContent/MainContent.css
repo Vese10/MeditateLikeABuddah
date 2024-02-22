@@ -6,6 +6,47 @@
 
 .main-content {
   animation: mymove 2s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 110px 20px;
+}
+
+.meditate-logo-main {
+  display: flex;
+  width: 200px;
+}
+
+.are-you-ready {
+  margin-bottom: 20px;
+}
+
+li {
+  text-align: start;
+  font-size: 25px;
+}
+
+.get-started {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  font-size: 25px;
+  background-color: #B6C1AD;
+}
+
+.get-started:hover {
+  background-color: #DFE4DC;
+}
+
+.get-started:active {
+  background-color: #B6C1AD;
 }
 
 @keyframes mymove {
@@ -14,108 +55,32 @@
 }
 
 @media (min-width: 460px) {
+
   .main-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 110px 60px;
-    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .title {
     font-size: 55px;
   }
 
-  .meditate-logo-main {
-    display: flex;
-    width: 200px;
-  }
-
   .are-you-ready {
     font-size: 40px;
-    margin-bottom: 20px;
-  }
-
-  li {
-    text-align: start;
-    font-size: 25px;
-  }
-
-  .get-started {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    width: auto;
-    height: auto;
-    cursor: pointer;
-    font-size: 25px;
-    background-color: #B6C1AD;
-  }
-
-  .get-started:hover {
-    background-color: #DFE4DC;
-  }
-
-  .get-started:active {
-    background-color: #B6C1AD;
   }
 }
 
 @media (max-width: 460px) {
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding-top: 110px;
-    padding-bottom: 100px;
-  }
 
   .title {
     font-size: 30px;
   }
 
-  .meditate-logo-main {
-    display: flex;
-    width: 200px;
-  }
-
   .are-you-ready {
     font-size: 30px;
-    margin-bottom: 20px;
-  }
-
-  li {
-    text-align: start;
-    font-size: 25px;
   }
 
   .how-to-meditate {
     padding: 10px 50px;
-  }
-
-  .get-started {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    width: auto;
-    height: auto;
-    background-color: #B6C1AD;
-    cursor: pointer;
-    font-size: 25px;
-  }
-
-  .get-started:hover {
-    background-color: #DFE4DC;
-  }
-
-  .get-started:active {
-    background-color: #B6C1AD;
   }
 }
