@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <div className='images'>  
       <img src={backgroundSmall} className='background-small' alt='Leaves'/>
       <img src={backgroundBig} className='background-big' alt='Leaves'/>
-      <App className='app' />
+      <App />
     </div>
   </React.StrictMode>,
 )
