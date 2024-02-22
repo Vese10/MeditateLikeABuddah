@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-.back {
-  height: auto;
-  z-index: 2;
-}
-
 .main-content {
   animation: mymove 2s;
 }
@@ -28,19 +23,6 @@
     height: 100%;
     padding: 110px 60px;
     text-align: center;
-  }
-
-  .background-big {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 68px 0;
-  }
-
-  .background-small {
-    display: none;
   }
 
   .title {
@@ -93,18 +75,6 @@
     text-align: center;
     padding-top: 110px;
     padding-bottom: 100px;
-  }
-
-  .background-big {
-    display: none;
-  }
-
-  .background-small {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
   .title {
