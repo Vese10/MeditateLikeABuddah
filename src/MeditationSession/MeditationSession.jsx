@@ -4,7 +4,7 @@ import './MeditationSession.css';
 import meditateLogo from '../../public/meditate-logo.svg';
 import GetStarted from '../GetStarted/GetStarted';
 
-function MeditationSession( {time, sound} ) {
+function MeditationSession( {toggleGetStarted, time, sound} ) {
   const [stopMeditate, setStopMeditate] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -40,10 +40,6 @@ function MeditationSession( {time, sound} ) {
     }
   }, [isPaused]);
 
-  const handleStopMeditate = () => {
-    setStopMeditate(true);
-  };
-
   const handlePause = () => {
     setIsPaused(true);
   };
@@ -69,7 +65,7 @@ function MeditationSession( {time, sound} ) {
         <div className="session-actions">
           <button className="play" onClick={handlePlay}>▶</button>
           <button className="pause" onClick={handlePause}>▐▐</button>
-          <button className="close" onClick={handleStopMeditate}>◼</button>
+          <button className="close" onClick={toggleGetStarted}>◼</button>
         </div>
       </div>
     </div>
