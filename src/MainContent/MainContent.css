@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.back {
+  height: auto;
+  z-index: 2;
+}
+
 .main-content {
   animation: mymove 2s;
 }
@@ -23,7 +28,19 @@
     height: 100%;
     padding: 110px 60px;
     text-align: center;
-    background-color: #DFE4DC;
+  }
+
+  .background-big {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 68px 0;
+  }
+
+  .background-small {
+    display: none;
   }
 
   .title {
@@ -67,15 +84,27 @@
 
 @media (max-width: 460px) {
   .main-content {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     width: 100%;
-    height: 100vh;
-    padding: 120px 60px;
-    background-color: #DFE4DC;
+    height: 100%;
     text-align: center;
+    padding-top: 110px;
+    padding-bottom: 100px;
+  }
+
+  .background-big {
+    display: none;
+  }
+
+  .background-small {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .title {
@@ -88,13 +117,17 @@
   }
 
   .are-you-ready {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 20px;
   }
 
   li {
     text-align: start;
-    font-size: 15px;
+    font-size: 25px;
+  }
+
+  .how-to-meditate {
+    padding: 10px 50px;
   }
 
   .get-started {
@@ -105,6 +138,7 @@
     height: auto;
     background-color: #B6C1AD;
     cursor: pointer;
+    font-size: 25px;
   }
 
   .get-started:hover {
