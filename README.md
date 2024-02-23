@@ -5,14 +5,14 @@
 
 This is an app created for the fourth project of Start2Impact University's master in Full Stack Development. 
 
-                    [![Meditate-Like-A-Buddah-Home.png](https://i.postimg.cc/5ySdHxxp/Meditate-Like-A-Buddah-Home.png)](https://postimg.cc/vxTSkwx6)
+[![Meditate-Like-A-Buddah-Home.png](https://i.postimg.cc/5ySdHxxp/Meditate-Like-A-Buddah-Home.png)](https://postimg.cc/vxTSkwx6)
 
 
 ## Usage example
 
 The app is supposed to introduce the user to meditation and let him try a customized session of meditation by the usege of a timer and some relaxing sounds.
 
-                    [![Custom-session.png](https://i.postimg.cc/vm2r5j8s/Custom-session.png)](https://postimg.cc/SX8YhgzT)
+[![Custom-session.png](https://i.postimg.cc/vm2r5j8s/Custom-session.png)](https://postimg.cc/SX8YhgzT)
 
 ## Skills
 
