@@ -35,8 +35,8 @@ function Header({toggleAbout, toggleContact, toggleMainContent, changeLanguage})
     <header ref={menuRef}>
       <nav className="header">
         <div className="language">
-          <button className="ita" onClick={() => changeLanguage('it')}>IT</button>
-          <button className="eng" onClick={() => changeLanguage('en')}>EN</button>
+          <button className="ita" onClick={() => changeLanguage('it')}>ITA</button>
+          <button className="eng" onClick={() => changeLanguage('en')}>ENG</button>
         </div>
         <div className="logo" onClick={() => {toggleMainContent(); setOpenMenu(false); setOpenHamburgerMenu(false);}}>
           <img src={meditateLogo} className='meditate-logo'></img>

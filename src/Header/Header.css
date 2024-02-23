@@ -36,13 +36,22 @@
 .eng {
   display: flex;
   position: relative;
+  justify-content: center;
+  align-items: center;
   background-color: #DFE4DC;
-  border: none;
+  font-weight: bold;
   cursor: pointer;
+  width: 35px;
+  height: 35px;
   margin: 0 5px;
-  padding: 8px;
-  min-width: 20px;
+  padding: 2px;
   border: 1px solid #000000;
+}
+
+.ita:focus,
+.eng:focus {
+  background-color: #B6C1AD;
+  border: 2px solid #000000;
 }
 
 .menu-btn {
@@ -100,11 +109,6 @@
   .ita:hover,
   .eng:hover {
     background-color: #D3D9CE;
-  }
-
-  .ita:active,
-  .eng:active {
-    background-color: #B6C1AD;
   }
 
   .hamburger-menu-open > li:hover {
