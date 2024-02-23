@@ -4,7 +4,7 @@ import './MeditationSession.css';
 import meditateLogo from '../../public/meditate-logo.svg';
 import GetStarted from '../GetStarted/GetStarted';
 
-function MeditationSession( {toggleGetStarted, time, sound} ) {
+function MeditationSession( {toggleGetStarted, toggleMeditationSession, toggleMainContent, time, sound} ) {
   const [stopMeditate, setStopMeditate] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -48,8 +48,14 @@ function MeditationSession( {toggleGetStarted, time, sound} ) {
     setIsPaused(false);
   };
 
+  const startNewSession = () => {
+    setStopMeditate(false);
+    setProgress(0);
+    setRemainingTime(sessionDuration);
+  };
+
   if (stopMeditate) {
-    return <GetStarted />;
+    return <GetStarted toggleMeditationSession={toggleMeditationSession} toggleMainContent={toggleMainContent} startNewSession={startNewSession} key={Date.now()}/>;
   }
 
   return (

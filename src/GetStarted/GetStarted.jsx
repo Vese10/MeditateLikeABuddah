@@ -8,9 +8,10 @@ import Wind from '../assets/wind.mp3'
 import enTranslations from '../Language/en.json'
 import itTranslations from '../Language/it.json'
 
-function GetStarted({toggleMainContent, toggleMeditationSession, language}) {
+function GetStarted({toggleMainContent, toggleMeditationSession, startNewSession, language}) {
   const [selectedTime, setSelectedTime] = useState(1);
   const [selectedSound, setSelectedSound] = useState(Fire);
+  const [submitKey, setSubmitKey] = useState(0);
 
   const translations = language === 'en' ? enTranslations : itTranslations;
 
@@ -25,6 +26,18 @@ function GetStarted({toggleMainContent, toggleMeditationSession, language}) {
   const handleSubmit = (event) => {
     event.preventDefault();
     toggleMeditationSession(selectedTime, selectedSound);
+    setSubmitKey(submitKey + 1);
+  };
+
+  const handleStartNewSession = () => {
+    startNewSession();
+    setSubmitKey(submitKey + 1);
+  };
+
+  const handleStartNewSessionAndSubmit = (event) => {
+    event.preventDefault();
+    handleSubmit(event);
+    handleStartNewSession();
   };
 
       return(
@@ -32,7 +45,7 @@ function GetStarted({toggleMainContent, toggleMeditationSession, language}) {
           <img src={meditateLogo} className='meditate-logo-set' onClick={toggleMainContent}></img>
           <div className="options">
             <h2 className='personal-settings'>{translations.personal_settings}</h2>
-            <form className='form' onSubmit={handleSubmit}>
+            <form className='form' onSubmit={handleStartNewSessionAndSubmit} key={submitKey}>
               <label htmlFor="time" className='time'>{translations.time}</label>
               <select id="time" name="time" onChange={handleTimeChange}>
                 <option value="1">1 min</option>

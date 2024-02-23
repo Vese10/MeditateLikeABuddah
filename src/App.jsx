@@ -65,7 +65,7 @@ function App() {
       {showContact ? <Contact language={language}/> : null}
       {showMainContent ? <MainContent toggleGetStarted={toggleGetStarted} language={language} /> : null}
       {showGetStarted ? <GetStarted toggleMainContent={toggleMainContent} toggleMeditationSession={toggleMeditationSession} language={language}/> : null}
-      {startMeditate ? <MeditationSession time={meditationTime} sound={meditationSound} toggleGetStarted={toggleGetStarted} /> :null}
+      {startMeditate ? <MeditationSession time={meditationTime} sound={meditationSound} toggleGetStarted={toggleGetStarted} toggleMeditationSession={toggleMeditationSession} toggleMainContent={toggleMainContent}/> :null}
       <Footer language={language}/>
     </>
   )
