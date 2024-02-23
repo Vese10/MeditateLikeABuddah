@@ -53,11 +53,13 @@ option {
 .submit {
   margin-top: 20px;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 25px;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
   background-color: #B6C1AD;
+  min-width: 170px;
+  min-height: 50px;
 }
 
 .submit:hover {
