@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import meditateLogo from '../../public/meditate-logo.svg'
-import backgroundSmall from '../assets/backgraound-img-small.jpg'
 import './MainContent.css'
 import enTranslations from '../Language/en.json'
 import itTranslations from '../Language/it.json'
