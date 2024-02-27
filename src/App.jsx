@@ -15,7 +15,6 @@ function App() {
   const [showMainContent, setShowMainContent] = useState(true);
   const [showGetStarted, setShowGetStarted] = useState(false);
   const [startMeditate, setStartMeditate] = useState(false);
-  const [language, setLanguage] = useState('en')
   const [meditationTime, setMeditationTime] = useState(1);
   const [meditationSound, setMeditationSound] = useState(null);
   const { i18n } = useTranslation();
@@ -57,19 +56,18 @@ function App() {
   }
 
   const changeLanguage = (selectedLanguage) => {
-    setLanguage(selectedLanguage);
     i18n.changeLanguage(selectedLanguage);
   }
 
   return (
     <>
       <Header toggleAbout={toggleAbout} toggleContact={toggleContact} toggleMainContent={toggleMainContent} changeLanguage={changeLanguage}/>
-      {showAbout ? <About language={language}/> : null}
-      {showContact ? <Contact language={language}/> : null}
-      {showMainContent ? <MainContent toggleGetStarted={toggleGetStarted} language={language} /> : null}
-      {showGetStarted ? <GetStarted toggleMainContent={toggleMainContent} toggleMeditationSession={toggleMeditationSession} language={language}/> : null}
+      {showAbout ? <About /> : null}
+      {showContact ? <Contact /> : null}
+      {showMainContent ? <MainContent toggleGetStarted={toggleGetStarted} /> : null}
+      {showGetStarted ? <GetStarted toggleMainContent={toggleMainContent} toggleMeditationSession={toggleMeditationSession}/> : null}
       {startMeditate ? <MeditationSession time={meditationTime} sound={meditationSound} toggleGetStarted={toggleGetStarted} toggleMeditationSession={toggleMeditationSession} toggleMainContent={toggleMainContent}/> :null}
-      <Footer language={language}/>
+      <Footer />
     </>
   )
 }
