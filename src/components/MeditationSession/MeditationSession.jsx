@@ -1,7 +1,7 @@
 import ReactPlayer from 'react-player'
 import { useState, useEffect } from 'react';
 import './MeditationSession.css';
-import meditateLogo from '../../public/meditate-logo.svg';
+import meditateLogo from '../../../public/meditate-logo.svg';
 import GetStarted from '../GetStarted/GetStarted';
 
 function MeditationSession( {toggleGetStarted, toggleMeditationSession, toggleMainContent, time, sound} ) {

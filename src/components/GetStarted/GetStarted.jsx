@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import './GetStarted.css'
-import meditateLogo from '../../public/meditate-logo.svg'
-import Fire from '../assets/fire.mp3'
-import Birds from '../assets/birds.mp3'
-import Rain from '../assets/rain.mp3'
-import Wind from '../assets/wind.mp3'
+import meditateLogo from '../../../public/meditate-logo.svg'
+import Fire from '../../assets/fire.mp3'
+import Birds from '../../assets/birds.mp3'
+import Rain from '../../assets/rain.mp3'
+import Wind from '../../assets/wind.mp3'
 
 function GetStarted({toggleMainContent, toggleMeditationSession, startNewSession}) {
   const [selectedTime, setSelectedTime] = useState(1);

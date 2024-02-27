@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import './App.css'
 import Header from './theme/Header'
-import MainContent from './MainContent/MainContent'
-import About from './About/About'
-import Contact from './Contact/Contact'
+import MainContent from './pages/views/features/MainContent/MainContent'
+import About from './pages/views/features/About/About'
+import Contact from './pages/views/features/Contact/Contact'
 import Footer from './theme/Footer'
-import GetStarted from './GetStarted/GetStarted'
-import MeditationSession from './MeditationSession/MeditationSession'
+import GetStarted from './components/GetStarted/GetStarted'
+import MeditationSession from './components/MeditationSession/MeditationSession'
 
 function App() {
   const [showAbout, setShowAbout] = useState(false);

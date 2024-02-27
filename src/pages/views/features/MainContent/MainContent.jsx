@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import meditateLogo from '../../public/meditate-logo.svg'
+import meditateLogo from '../../../../../public/meditate-logo.svg'
 import './MainContent.css'
 
 function MainContent({ toggleGetStarted }){
