@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import i18n from './i18n.jsx'
 import App from './App.jsx'
 import './index.css'
 import backgroundSmall from './assets/backgraound-img-small.jpg'

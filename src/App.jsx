@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import './App.css'
 import Header from './Header/Header'
 import MainContent from './MainContent/MainContent'
@@ -17,6 +18,7 @@ function App() {
   const [language, setLanguage] = useState('en')
   const [meditationTime, setMeditationTime] = useState(1);
   const [meditationSound, setMeditationSound] = useState(null);
+  const { i18n } = useTranslation();
 
   const toggleAbout = () => {
     setShowAbout(true);
@@ -56,6 +58,7 @@ function App() {
 
   const changeLanguage = (selectedLanguage) => {
     setLanguage(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage);
   }
 
   return (

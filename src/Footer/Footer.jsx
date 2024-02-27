@@ -1,13 +1,11 @@
+import { useTranslation } from 'react-i18next'
 import instagram from '../assets/instagram-logo.svg'
 import github from '../assets/github-logo.png'
 import linkedin from '../assets/linkedin-logo.png'
 import './Footer.css'
-import enTranslations from '../Language/en.json'
-import itTranslations from '../Language/it.json'
 
-function Footer({language}){
-
-  const translations = language === 'en' ? enTranslations : itTranslations;
+function Footer() {
+  const { t } = useTranslation();
 
   return(
     <div className='footer'>
@@ -22,7 +20,7 @@ function Footer({language}){
           <img className="linkedin-img" src={linkedin} alt="LinkedIn logo" /> 
         </a>
       </div>
-      <small className='footer-text'>{translations.rights}</small>
+      <small className='footer-text'>{t('rights')}</small>
     </div>
   )
 }
