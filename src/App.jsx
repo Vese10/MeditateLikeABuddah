@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import './App.css'
-import Header from './Header/Header'
+import Header from './theme/Header'
 import MainContent from './MainContent/MainContent'
 import About from './About/About'
 import Contact from './Contact/Contact'
-import Footer from './Footer/Footer'
+import Footer from './theme/Footer'
 import GetStarted from './GetStarted/GetStarted'
 import MeditationSession from './MeditationSession/MeditationSession'
 
